@@ -4,10 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Database\Factories\UrlFactory;
 use Illuminate\Support\Str;
 
 class Url extends Model
-{
+{    /** @use HasFactory<UrlFactory> */
+    use HasFactory;
+
     protected $hidden = ['id'];
 
     protected $fillable = [
